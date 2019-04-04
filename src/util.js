@@ -41,6 +41,12 @@ const intersection = function(set1, set2) {
   return set1.filter(isContain);
 };
 
+const splitNumbers = function(stringOfnumbers) {
+  let list = [];
+  list = stringOfnumbers.split(',');
+  return list.map(x => +x);
+};
+
 export {
   isIncludes,
   increamentList,
@@ -49,5 +55,6 @@ export {
   createUniqueList,
   concat,
   convertToLinear,
-  intersection
+  intersection,
+  splitNumbers
 };
