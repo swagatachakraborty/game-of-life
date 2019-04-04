@@ -5,7 +5,7 @@ import {
   convertToLinear,
   cartesionProduct,
   isIncludes
-} from './util.js';
+} from './util';
 
 const createBoard = function(bound) {
   let x = bound.topLeft[0];
@@ -45,8 +45,8 @@ const isAlive = function(liveCells, bound, cell) {
   let liveCellsString = liveCells.map(x => x.toString());
   let aliveNeighbours = intersection(neighbours, liveCellsString);
   let willRemainAlive =
-    aliveNeighbours.length == 2 && liveCellsString.includes(cell);
-  let willComeAlive = aliveNeighbours.length == 3;
+    aliveNeighbours.length === 2 && liveCellsString.includes(cell);
+  let willComeAlive = aliveNeighbours.length === 3;
   return willRemainAlive || willComeAlive;
 };
 
@@ -57,7 +57,7 @@ const calculateWidth = function(world) {
   return { row: +row, column: +column };
 };
 
-export default {
+export {
   createBoard,
   addRows,
   allPossibleNeighbours,

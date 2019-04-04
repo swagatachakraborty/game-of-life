@@ -7,7 +7,7 @@ const nextGeneration = function(currGeneration, bounds) {
   return world.filter(isCellAlive).map(splitNumbers);
 };
 
-export default { nextGeneration };
+export default nextGeneration;
 
 /*
 describe('nextGeneration', () => {

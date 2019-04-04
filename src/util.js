@@ -41,7 +41,7 @@ const intersection = function(set1, set2) {
   return set1.filter(isContain);
 };
 
-export default {
+export {
   isIncludes,
   increamentList,
   cartesionProduct,
