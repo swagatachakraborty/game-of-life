@@ -146,7 +146,7 @@ class App extends Component {
         </div>
         <div className="footer">
           <Button clickListener={this.startGame} value="START" />
-          <Button clickListener={this.endGame} value="END" />
+          <Button clickListener={this.endGame} value="STOP" />
         </div>
       </main>
     );
